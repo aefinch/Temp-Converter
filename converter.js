@@ -20,7 +20,6 @@ button.onclick = determineConverter;
 // This function should determine which conversion should
 // happen based on which radio button is selected.
 var radios = document.getElementsByName("conversionType")
-var output = document.getElementById("outputTemp");
 var selectedRadio="";
 var newTemp="";
 function determineConverter (clickEvent) {
@@ -61,10 +60,13 @@ function determineConverter (clickEvent) {
 }
 // Assign a function to be executed when the button is clicked
 button.addEventListener("click", determineConverter);
-button.addEventListener("keyup", whichKey(event));
+userInput.addEventListener("keyup", whichKey);
+radios.addEventListener("keyup", whichKey);
 function whichKey() {
-	event.preventDefault();
-	if (event.keyCode===13) {
-		document.getElementById("converter").click();
-	}
+  if(event.keyCode===13) {
+    event.preventDefault();
+    document.getElementById("convert").click();
+  }
 }
+
+// Add event listener to input fields
