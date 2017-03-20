@@ -4,12 +4,11 @@ var textInput=document.getElementById("temp");
 var radios = document.getElementsByName("conversionType")
 var selectedRadio="";
 var newTemp="";
-var userInput=textInput.value;
 
 // Create the conversion functions
 function toCelsius (fahrenheit) {
 // (F-32)*5/9
-var C=(fahrenheit-32)*(5/9)
+var C=(fahrenheit-32)*(5/9);
 return C;
 }
 
@@ -23,11 +22,12 @@ return F;
 // This function should determine which conversion should
 // happen based on which radio button is selected.
 function determineConverter (clickEvent) {
-  for (var i=0; i< radios.length; i++) {
-  	if (radios[i].checked) {
+	var userInput=textInput.value;
+	for (var i=0; i< radios.length; i++) {
+		if (radios[i].checked) {
 	  	selectedRadio=radios[i].value;
-  	}
-  }
+		}
+	}
 	if (selectedRadio==="CtoF") {
 		newTemp=toFahrenheit(userInput);
 		if (newTemp > 90) {
