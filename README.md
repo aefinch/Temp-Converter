@@ -14,8 +14,8 @@
 - CSS
 
 ###How to Run
-1. git clone https://github.com/aefinch/blog
-1. cd blog
+1. git clone https://github.com/aefinch/Temp-Converter
+1. cd Temp-Converter
 1. Run http-server
 1. Navigate in browser to http://localhost:8080
 
