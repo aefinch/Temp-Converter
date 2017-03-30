@@ -1,0 +1,7 @@
+.user_input {
+	display: inline-block;
+	flex-wrap: wrap;
+}
+.conversion {
+	list-style: none;
+}
